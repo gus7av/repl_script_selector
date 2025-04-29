@@ -21,7 +21,7 @@ class Menu:
         return sorted(files)
 
     def show(self):
-        print("\n")  # Linebreak before redraw
+        print("\033[2J\033[H", end="")  # Clear screen
         end = self.view_offset + self.page_size
         visible_scripts = self.scripts[self.view_offset:end]
 
