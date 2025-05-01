@@ -27,7 +27,7 @@ class Menu:
 
         for i, script in enumerate(visible_scripts):
             idx = self.view_offset + i
-            marker = "→" if idx == self.cursor else " "
+            marker = ">" if idx == self.cursor else " "
             print(f"{marker} {path_basename(script)}")
 
     def move_up(self):
